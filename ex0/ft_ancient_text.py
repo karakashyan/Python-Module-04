@@ -1,5 +1,5 @@
 import sys
-import typing
+
 
 def main() -> None:
     if len(sys.argv) != 2:
@@ -20,5 +20,6 @@ def main() -> None:
         print(f"File '{sys.argv[1]}' closed.")
     except OSError as e:
         print(f"Error opening file '{sys.argv[1]}': {e}")
+
 
 main()
