@@ -32,10 +32,13 @@ def main() -> None:
             print("Not saving data.")
         else:
             print(f"Saving data to '{file_name}'")
-            g = open(file_name, "w")
-            g.write("\n".join(lines))
-            g.close()
-            print(f"Data saved in file '{file_name}'.")
+            try:
+                g = open(file_name, "w")
+                g.write("\n".join(lines))
+                g.close()
+                print(f"Data saved in file '{file_name}'.")
+            except OSError as e:
+                print(f"Error opening file '{file_name}': {e}")
     except OSError as e:
         print(f"Error opening file '{sys.argv[1]}': {e}")
 

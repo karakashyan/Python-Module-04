@@ -17,6 +17,7 @@ def secure_archive(
 def main() -> None:
     print("=== Cyber Archives Security ===")
     print()
+
     print("Using 'secure_archive' to read from a nonexistent file:")
     print(secure_archive("/not/existing/file"))
     print()
